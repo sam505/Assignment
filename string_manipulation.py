@@ -28,7 +28,8 @@ paragraph = "People list to see examples of this type of thing working, so using
 words = words_key_value_pairs(paragraph)
 letters = letters_key_value_pairs(paragraph)
 
-sorted_words = sorted(words.items(), key=lambda kv: kv[1])
+sorted_words = sorted(words.items(), key=lambda kv: kv[1], reverse=True)
 sorted_letters = sorted(letters.items(), key=lambda kv: kv[1], reverse=True)
 print(sorted_words)
+print()
 print(sorted_letters)
