@@ -1,7 +1,7 @@
 def comprehensions(a, b):
     a_list = [a**n for n in range(b+1)]
-    print("List: ", a_list)
-    print("Average: ", sum(a_list)/len(a_list))
+    print("Te average of list", a_list, end="")
+    print(" is ", sum(a_list)/len(a_list), ".", sep="")
 
 
 comprehensions(6, 3)
