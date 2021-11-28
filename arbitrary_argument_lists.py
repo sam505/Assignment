@@ -2,6 +2,7 @@ global avg_int, avg_float
 
 
 def numbers(*nums):
+    global avg_int, avg_float
     ints_count = 0
     floats_count = 0
     ints_sum = 0
@@ -19,14 +20,16 @@ def numbers(*nums):
                 floats_sum += num
 
     if ints_count != 0 and floats_count != 0:
+        avg_int = ints_sum / ints_count
+        avg_float = floats_sum / floats_count
         print(
-            f"The list contained a mix of ints and floats. The average of the ints was {ints_sum / ints_count}, and the "
-            f"average of the floats was {floats_sum / floats_count}")
+            f"The list contained a mix of ints and floats. The average of the ints was {avg_int}, and the "
+            f"average of the floats was {avg_float}")
     elif ints_count != 0 and floats_count == 0:
-        print(f"The list contained ints, and the average is {ints_sum / ints_count}")
+        print(f"The list contained ints, and the average is {avg_int}")
         return 1
     elif ints_count == 0 and floats_count != 0:
-        print(f"The list contained floats, and the average is {floats_sum / floats_count}")
+        print(f"The list contained floats, and the average is {avg_float}")
 
 
 print("Mix")
